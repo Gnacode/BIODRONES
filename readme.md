@@ -5,9 +5,12 @@
 This project models **aerosol dispersion and subsequent infection spread through air travel networks** using a combination of Lagrangian dispersion modeling (OpenDrift) and network-based infection propagation.
  It combines geospatial simulation, probabilistic infection modeling, and visualization of results for three major Danish airports (**AAL, BLL, and CPH**) over the period **24–29 September 2025**.
 
+Results can be seen on the Github page: https://gnacode.github.io/EURSUR/
+and the dispersion is shown below as Figure 1.
 ------
 
 ## **1. Dispersion Modeling with OpenDrift**
+
 
 ### **Purpose**
 
