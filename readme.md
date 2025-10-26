@@ -45,8 +45,7 @@ To estimate the initial **exposure area and intensity** of an aerosol release ev
 `DK-rend-4e.py` converts frames into **satellite basemap PNGs** using Esri World Imagery and `contextily`.
  It color-codes particles by source (AAL/BLL/CPH) and produces visual sequences of the aerosol plume dispersion across Denmark.
 
-<!-- Option 1: simple Markdown (relative path) -->
-![Figure 1 — Architecture diagram](Figure1.svg)
+https://github.com/Gnacode/EURSUR/blob/dee528019603d576365d743dc69f021a40ed305c/Figure%201.svg
 
 ------
 
