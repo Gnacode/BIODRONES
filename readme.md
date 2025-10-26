@@ -225,7 +225,7 @@ Each scenario generates:
 - `infected_airport_map_summary.html` — Overview page with totals
 - `infected_airport_dashboard.html` — Combined navigation dashboard
 
-![Infectivity Dashboard](https://github.com/Gnacode/EURSUR/blob/ddb4f9d99aff878f46e767541ad4993b1d638d76/infected_airport_dashboard.html)
+
 ### **Color and Layout Scheme**
 
 | Category       | Color                       | Description          |
