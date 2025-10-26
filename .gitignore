@@ -1,0 +1,23 @@
+# Virtual envs
+.venv/
+venv/
+
+# Generated graphics/output
+frames_png/
+*.png
+*.npy
+*.log
+*.csv~
+*.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor / OS stuff
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

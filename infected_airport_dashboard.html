@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Infected Passenger Spread Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem;
+      background: #f8f9fa;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p.desc {
+      font-size: 0.9rem;
+      max-width: 900px;
+      line-height: 1.4;
+      color: #444;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 400px;
+      gap: 1rem;
+    }
+
+    .panel {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      background: #f0f2f5;
+      border-bottom: 1px solid #ddd;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #111;
+    }
+
+    .panel-body {
+      flex: 1;
+      position: relative;
+    }
+
+    .panel-body iframe {
+      position: absolute;
+      border: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    @media (max-width: 1200px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 400px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 400px;
+      }
+    }
+
+    .legend-block {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #444;
+      line-height: 1.4;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      max-width: 900px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+
+    .legend-swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .day1 { background: blue; }
+    .day2 { background: green; }
+    .day3 { background: orange; }
+    .day4 { background: red; }
+  </style>
+</head>
+<body>
+
+<h1>Infected Passenger Spread Dashboard</h1>
+<p class="desc">
+  Top row: no mask. Bottom row: 50% universal masking. Circles show infected arrivals
+  at each airport. Larger = more. Color = day of arrival (Day 1 blue → Day 4 red).
+</p>
+
+<div class="grid">
+
+  <div class="panel">
+    <div class="panel-header">Low (no mask)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_low.html"></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Medium (no mask)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_medium.html"></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">High (no mask)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_high.html"></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Low (mask 50%)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_low_mask.html"></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">Medium (mask 50%)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_medium_mask.html"></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">High (mask 50%)</div>
+    <div class="panel-body">
+      <iframe src="infected_airport_map_high_mask.html"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<div class="legend-block">
+  <div>
+    <span class="legend-swatch day1"></span>Day 1
+    &nbsp;&nbsp;
+    <span class="legend-swatch day2"></span>Day 2
+    &nbsp;&nbsp;
+    <span class="legend-swatch day3"></span>Day 3
+    &nbsp;&nbsp;
+    <span class="legend-swatch day4"></span>Day 4
+  </div>
+  <div>
+    Masked scenarios assume 50% effective universal masking at exposure,
+    which cuts infected traveler export roughly in half.
+  </div>
+</div>
+
+</body>
+</html>
