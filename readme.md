@@ -6,7 +6,7 @@ This project models **aerosol dispersion and subsequent infection spread through
  It combines geospatial simulation, probabilistic infection modeling, and visualization of results for three major Danish airports (**AAL, BLL, and CPH**) over the period **24–29 September 2025**.
 
 ------
-Results can be seen on Github page as an interactive dashboard: https://gnacode.github.io/EURSUR/
+Results can be seen on Github page as an interactive dashboard: https://gnacode.github.io/BIODRONES/
 and the dispersion is shown below as Figure 1.
 
 ## **1. Dispersion Modeling with OpenDrift**
